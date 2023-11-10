@@ -108,15 +108,14 @@ fun HalamanSatu(
                 OutlinedButton(modifier = Modifier.weight(1f),
                     onClick = onCancelButtonClicked
                 ){
-                    Button(modifier = Modifier.weight(1f),
-                        enabled = textJmlBeli.isNotEmpty(),
-                        onClick = onNextButtonClicked
-                    ) {
-                        Text(stringResource(R.string.next))
-                    }
-
+                    Text(stringResource(R.string.cancel))
                 }
-
+                Button(modifier = Modifier.weight(1f),
+                    enabled = textJmlBeli.isNotEmpty(),
+                    onClick = onNextButtonClicked
+                ) {
+                    Text(stringResource(R.string.next))
+                }
             }
         }
     }
