@@ -47,14 +47,14 @@ fun HalamanForm(
         OutlinedTextField(value = namaTxt, onValueChange = {namaTxt = it}, label = {
             Text(text = "Nama")
         })
+        OutlinedTextField(value = teleponTxt, onValueChange = {teleponTxt = it}, label = {
+            Text(text = "Telepon")
+        })
 
         OutlinedTextField(value = alamatTxt, onValueChange = {alamatTxt = it}, label = {
             Text(text = "Alamat")
         })
 
-        OutlinedTextField(value = teleponTxt, onValueChange = {teleponTxt = it}, label = {
-            Text(text = "Telepon")
-        })
         Spacer(modifier = Modifier.padding(16.dp))
         Button(onClick = {onSubmitButtonClick(ListDataTxt)}) {
             Text(text = stringResource(id = R.string.submit))

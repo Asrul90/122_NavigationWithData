@@ -43,17 +43,12 @@ fun HalamanDua(
             Text(text = "Nama")
             Text(text = orderUIState.nama)
             Divider()
-            Spacer(modifier = Modifier.padding(16.dp))
-
             Text(text = "Alamat")
             Text(text = orderUIState.Alamat)
             Divider()
-            Spacer(modifier = Modifier.padding(16.dp))
-
             Text(text = "NoTelepon")
             Text(text = orderUIState.noTlp)
             Divider()
-            Spacer(modifier = Modifier.padding(16.dp))
 
             }
             items.forEach { item ->
@@ -86,6 +81,6 @@ fun HalamanDua(
                     }
                 }
             }
-            }
-        }
+    }
+
 }
