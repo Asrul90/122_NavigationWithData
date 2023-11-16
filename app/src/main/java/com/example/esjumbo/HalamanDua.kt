@@ -3,6 +3,7 @@ package com.example.esjumbo
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
@@ -14,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
 import com.example.esjumbo.data.OrderUIState
 
 @Composable
@@ -37,6 +39,23 @@ fun HalamanDua(
             Modifier.padding(dimensionResource(R.dimen.padding_medium)),
             verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small))
         ) {
+
+            Text(text = "Nama")
+            Text(text = orderUIState.nama)
+            Divider()
+            Spacer(modifier = Modifier.padding(16.dp))
+
+            Text(text = "Alamat")
+            Text(text = orderUIState.Alamat)
+            Divider()
+            Spacer(modifier = Modifier.padding(16.dp))
+
+            Text(text = "NoTelepon")
+            Text(text = orderUIState.noTlp)
+            Divider()
+            Spacer(modifier = Modifier.padding(16.dp))
+
+            }
             items.forEach { item ->
                 Column {
                     Text(item.first.uppercase())
