@@ -49,6 +49,7 @@ fun HalamanForm(
             .padding(16.dp)
             .fillMaxSize()
     ) {
+        Text(text = "DATA PELANGANG")
 
         OutlinedTextField(value = namaTxt, onValueChange = {namaTxt = it}, label = {
             Text(text = "Nama")
