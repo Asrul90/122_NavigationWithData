@@ -5,18 +5,21 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.Divider
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.example.esjumbo.data.OrderUIState
+import com.example.esjumbo.ui.komponen.FormatLabelHarga
 
 @Composable
 fun HalamanDua(
@@ -27,7 +30,7 @@ fun HalamanDua(
 ){
     val items = listOf(
         Pair(stringResource(R.string.quantity), orderUIState.jumlah),
-        Pair(stringResource(R.string.flavor), orderUIState.rasa)
+        Pair(stringResource(R.string.flavor), orderUIState.rasa),
     )
 
     Column (
@@ -39,7 +42,6 @@ fun HalamanDua(
             Modifier.padding(dimensionResource(R.dimen.padding_medium)),
             verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small))
         ) {
-
             Text(text = "Nama")
             Text(text = orderUIState.nama)
             Divider()
@@ -49,8 +51,6 @@ fun HalamanDua(
             Text(text = "NoTelepon")
             Text(text = orderUIState.noTlp)
             Divider()
-
-            }
             items.forEach { item ->
                 Column {
                     Text(item.first.uppercase())
@@ -59,6 +59,11 @@ fun HalamanDua(
                 Divider(thickness =
                 dimensionResource(R.dimen.thickness_divider))
             }
+            Text(text = "Subtotal : 37.000.00")
+        }
+        Column(
+            verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small))
+        ){
             Row (
                 modifier = Modifier
                     .weight(1f, false)
@@ -81,6 +86,7 @@ fun HalamanDua(
                     }
                 }
             }
+        }
     }
 
 }

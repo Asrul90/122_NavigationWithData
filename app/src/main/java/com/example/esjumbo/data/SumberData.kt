@@ -10,7 +10,5 @@ object SumberData {
         R.string.lemon,
         R.string.milk,
         R.string.layche,
-
-
     )
 }

@@ -50,14 +50,15 @@ fun HalamanForm(
             .fillMaxSize()
     ) {
         Text(text = "DATA PELANGANG")
-
+        Spacer(modifier = Modifier.padding(16.dp))
         OutlinedTextField(value = namaTxt, onValueChange = {namaTxt = it}, label = {
-            Text(text = "Nama")
+            Text(text = "Nama Pelangang")
         })
+        Spacer(modifier = Modifier.padding(16.dp))
         OutlinedTextField(value = teleponTxt, onValueChange = {teleponTxt = it}, label = {
-            Text(text = "Telepon")
+            Text(text = "No Telepon")
         })
-
+        Spacer(modifier = Modifier.padding(16.dp))
         OutlinedTextField(value = alamatTxt, onValueChange = {alamatTxt = it}, label = {
             Text(text = "Alamat")
         })
