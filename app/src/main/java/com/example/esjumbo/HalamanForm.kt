@@ -23,19 +23,20 @@ import androidx.compose.ui.unit.dp
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HalamanForm(
-    onSubmitButtonClick: (MutableList<String>) -> Unit
+    onSelanjutnyaButtonClick: (MutableList<String>) -> Unit
 ){
     var namaTxt by rememberSaveable {
-        mutableStateOf("")
-    }
-    var alamatTxt by remember {
         mutableStateOf("")
     }
     var teleponTxt by remember {
         mutableStateOf("")
     }
+    var alamatTxt by remember {
+        mutableStateOf("")
+    }
 
-    var ListDataTxt: MutableList<String> = mutableListOf(namaTxt,alamatTxt,teleponTxt)
+
+    var ListDataTxt: MutableList<String> = mutableListOf(namaTxt,teleponTxt,alamatTxt)
 
     Column(
         verticalArrangement = Arrangement.Center, horizontalAlignment =
@@ -56,7 +57,7 @@ fun HalamanForm(
         })
 
         Spacer(modifier = Modifier.padding(16.dp))
-        Button(onClick = {onSubmitButtonClick(ListDataTxt)}) {
+        Button(onClick = {onSelanjutnyaButtonClick(ListDataTxt)}) {
             Text(text = stringResource(id = R.string.submit))
 
         }
