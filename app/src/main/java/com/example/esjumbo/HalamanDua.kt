@@ -25,6 +25,7 @@ import com.example.esjumbo.ui.komponen.FormatLabelHarga
 fun HalamanDua(
     orderUIState: OrderUIState,
     onCancelButtonClicked: () -> Unit,
+    onClickBackButton: () -> Unit,
     //onSendButtonClicked: (String, String) -> Unit,
     modifier: Modifier = Modifier
 ){
@@ -59,7 +60,10 @@ fun HalamanDua(
                 Divider(thickness =
                 dimensionResource(R.dimen.thickness_divider))
             }
-            Text(text = "Subtotal : 37.000.00")
+            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.padding_small)))
+            FormatLabelHarga(subtotal = orderUIState.harga,
+                modifier = Modifier.align(Alignment.End)
+            )
         }
         Column(
             verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small))

@@ -49,7 +49,7 @@ fun HalamanForm(
             .padding(16.dp)
             .fillMaxSize()
     ) {
-        Text(text = "DATA PELANGANG")
+        Text(text = "DATA PELANGGAN")
         Spacer(modifier = Modifier.padding(16.dp))
         OutlinedTextField(value = namaTxt, onValueChange = {namaTxt = it}, label = {
             Text(text = "Nama Pelangang")

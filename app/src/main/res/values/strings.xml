@@ -13,8 +13,8 @@
     <string name="send">Send Ordeer To Another App</string>
     <string name="quantity">Jumlah</string>
     <string name="flavor">Rasa</string>
-    <string name="subtotal_price">Subtotal : Rp %</string>
-    <string name="total_price">Total %</string>
+    <string name="subtotal_price">Subtotal : Rp %s</string>
+    <string name="total_price">Total %s</string>
     <string name="submit">Submit</string>
     <string name="Selanjutnya">Selanjutnya</string>
 </resources>
